@@ -19,15 +19,14 @@ public class HelloController {
 		return "Welcome user";
 	}
 	
-	@GetMapping("/user/{name}")
-	public String name(@PathVariable String na) {
-		return "Welcome " + na;
+	@GetMapping("/userget/{name}")
+	public String name(@PathVariable String name) {
+		return String.format ("Welcome %s" , name);
 	}
 	
-	@PostMapping("/user/{name}")
-	public String name2(@RequestBody String na) {
-		return "Welcome " + na;
+	@PostMapping("/userpost/{name}")
+	public String name2(@RequestBody String name) {
+		return String.format ("Welcome %s" , name);
 	}
-
-
+	
 }
